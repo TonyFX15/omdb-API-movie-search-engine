@@ -1,0 +1,29 @@
+<% include ./header %>
+ 	<style type="text/css">
+ 		body{
+      background: #dbf1ff; 
+ 		}
+  	</style>
+      <center><h1>Simple Movie Search Result</h1></center>
+    </div>
+    <a href="/" class="btn btn-primary" style="text-align:center;width40px;height:36px;">back</a>
+  </header>
+  <div class="row text-center" style="display:flex; flex-wrap:wrap; ">
+    <% data["Search"].forEach(function(movie){ %>
+    	<% if(movie["Poster"]!="N/A") { %>
+      <div class = "col-sm-12 col-md-4" style="margin-top:10px;">
+        <div class="img-thumbnail">
+          <img src="<%= movie["Poster"] %>" alt="<%= movie["Title"] %>" class="img-thumbnail img-responsive">
+          <div class="py-2" >
+              <p class="h5"><%= movie["imdbID"] %></p>
+              <button class="btn btn-warning"><i class="fa fa-imdb"></i> <%= movie["Title"] %></button>
+              <button class="btn btn-secondary"><i class="fa fa-clock"></i>Year: <%= movie["Year"] %></button>
+            
+          </div>
+        </div>
+      </div>  
+      <% } %>
+    <%  }); %>
+  </div>
+</div>
+<% include ./footer %>
