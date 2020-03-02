@@ -15,3 +15,14 @@ to run the code
 
 open the local host page in your browser to start Search
 http://localhost:3000/
+
+Finished Goals :
+
+ Create backend API service to fetch external API
+ Design & implement the UI.
+ Return 404 page if no information found
+ Disply movie title & year
+
+ Unfinished Goals:
+ Display more movie infomation: Genre, Director, Writer
+ Open the next page for more details
